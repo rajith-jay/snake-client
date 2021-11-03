@@ -11,10 +11,20 @@ const connect = function () {
     console.log(data);
   });
 
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+  });
+
+  conn.on("connect", () => {
+    conn.write("Name: RUF");
+  });
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
   return conn;
 };
+
+connect();
 
 module.exports = connect;
