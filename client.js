@@ -19,6 +19,10 @@ const connect = function () {
     conn.write("Name: RUF");
   });
 
+  /*conn.on("connect", () => {
+    conn.write("Move: up");
+  });*/
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
